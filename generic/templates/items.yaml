@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: List
+metadata:
+  name: {{ .Values.name }}
+items: 
+{{- range .Values.items }}
+- {{ b64dec . }}
+{{- end}}
